@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tawheed VZW - Drejt një Xhamie Profesionale</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .timeline { position: relative; padding: 20px 0; }
+        .timeline::before { content: ''; position: absolute; left: 50%; transform: translateX(-50%); width: 4px; height: 100%; background: linear-gradient(to bottom, #064e3b, #a3e635); }
+        @media (max-width: 768px) { .timeline::before { left: 25px; } }
+        .timeline-item { margin-bottom: 50px; position: relative; }
+        .timeline-item::before { content: ''; position: absolute; left: 50%; transform: translateX(-50%); width: 24px; height: 24px; background: #064e3b; border: 4px solid white; border-radius: 50%; top: 0; z-index: 10; box-shadow: 0 0 0 4px #e5e7eb; }
+        @media (max-width: 768px) { .timeline-item::before { left: 25px; } }
+        .timeline-content { width: 45%; margin-left: auto; padding-right: 50px; }
+        .timeline-item:nth-child(even) .timeline-content { margin-left: 0; margin-right: auto; padding-right: 0; padding-left: 50px; }
+        @media (max-width: 768px) { .timeline-content, .timeline-item:nth-child(even) .timeline-content { width: calc(100% - 65px); margin-left: 0 !important; margin-right: 0 !important; padding-left: 50px !important; padding-right: 0 !important; } }
+        .fade-in { animation: fadeIn 0.8s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <nav class="bg-gradient-to-r from-green-900 to-green-800 text-white sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold">🌙 Tawheed</div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-4">
+                <ul class="flex gap-8 text-sm">
+                    <li><a href="#pse" class="hover:text-green-200">Pse?</a></li>
+                    <li><a href="#timeline" class="hover:text-green-200">Kronologjia</a></li>
+                    <li><a href="#faq" class="hover:text-green-200">Pyetje</a></li>
+                    <li><a href="statuten-en-wetten.html" class="hover:text-green-200">Estatutet</a></li>
+                    <li><a href="#contact" class="hover:text-green-200">Kontakt</a></li>
+                </ul>
+                <select id="languageSelect" class="bg-green-800 text-white px-3 py-2 rounded text-sm cursor-pointer hover:bg-green-700" onchange="changeLanguage(this.value)">
+                    <option value="nl">🇳🇱 Nederlands</option>
+                    <option value="en">🇬🇧 English</option>
+                    <option value="ar">🇸🇦 العربية</option>
+                    <option value="ko" selected>🇽🇰 Shqip</option>
+                    <option value="fr">🇫🇷 Français</option>
+                    <option value="tr">🇹🇷 Türkçe</option>
+                </select>
+            </div>
+            
+            <!-- Mobile Menu Button & Language -->
+            <div class="md:hidden flex items-center gap-3">
+                <select id="languageSelectMobile" class="bg-green-800 text-white px-2 py-1 rounded text-xs cursor-pointer hover:bg-green-700" onchange="changeLanguage(this.value)">
+                    <option value="nl">🇳🇱</option>
+                    <option value="en">🇬🇧</option>
+                    <option value="ar">🇸🇦</option>
+                    <option value="ko" selected>🇽🇰</option>
+                    <option value="fr">🇫🇷</option>
+                    <option value="tr">🇹🇷</option>
+                </select>
+                <button id="mobileMenuBtn" class="text-2xl hover:text-green-200">☰</button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobileMenu" class="hidden md:hidden bg-green-800 px-4 py-3 space-y-2">
+            <a href="#pse" class="block text-white hover:text-green-200 py-2">Pse?</a>
+            <a href="#timeline" class="block text-white hover:text-green-200 py-2">Kronologjia</a>
+            <a href="#faq" class="block text-white hover:text-green-200 py-2">Pyetje</a>
+            <a href="statuten-en-wetten.html" class="block text-white hover:text-green-200 py-2">Estatutet</a>
+            <a href="#contact" class="block text-white hover:text-green-200 py-2">Kontakt</a>
+        </div>
+    </nav>
+
+    <section class="bg-gradient-to-b from-green-900 to-green-800 text-white py-20 px-4">
+        <div class="max-w-4xl mx-auto text-center fade-in">
+            <h1 class="text-5xl font-bold mb-4">Drejt një Xhamie Tawheed Profesionale</h1>
+            <p class="text-xl text-green-100 mb-8">Së bashku, të ndërtojmë një të ardhme të ndershme dhe transparente</p>
+            <p class="text-lg text-green-50">Me qartësi, besim dhe përgjegjësi të përbashkët</p>
+        </div>
+    </section>
+
+    <section id="pse" class="py-16 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-green-900 mb-8 text-center">Pse Ndryshim?</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-green-50 p-8 rounded-lg border-l-4 border-green-900">
+                    <h3 class="text-2xl font-bold text-green-900 mb-4">🕌 Amanah - Përgjegjësi</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Në Islam, kemi datë ndaj Allahut dhe ndaj komunitetit tonë. Duhet të jemi të ndershëm me paratë dhe me vendimet. Kjo quhet 'Amanah'.
+                    </p>
+                </div>
+                <div class="bg-green-50 p-8 rounded-lg border-l-4 border-green-900">
+                    <h3 class="text-2xl font-bold text-green-900 mb-4">💡 Qartësi & Besim</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Pyetjet e anëtarëve për paratë janë normale. Përgjigjet e qarta ndërtojnë besim. Transparenca do të thotë: të gjithë mund të shohin si përdoren paratë.
+                    </p>
+                </div>
+            </div>
+            <div class="mt-8 bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded">
+                <h4 class="font-bold text-yellow-900 mb-2">📋 Çfarë është një Shoqatë?</h4>
+                <p class="text-gray-700">
+                    Një shoqatë është një 'Organizatë pa Qëllime Fitimi'. Kjo do të thotë se të gjithë paratë duhet të përdoren për qëllimet e xhamisë.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="timeline" class="py-20 px-4 bg-gray-100">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-4xl font-bold text-green-900 mb-16 text-center">Rruga Drejt Transparencës</h2>
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-green-900 mb-2">Hapi 1: Fillimi</h3>
+                        <p class="text-gray-700 mb-3">Anëtarët u bënë pyetje për mënyrën se si përdoren paratë. Kjo është e shëndetshme dhe normale.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-green-900 mb-2">Hapi 2: Dialogu</h3>
+                        <p class="text-gray-700 mb-3">Përpyeim biseda në grupet e WhatsApp dhe u ftohëm të takohesh me bordin.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-green-900 mb-2">Hapi 3: Kontrolli Ligjor</h3>
+                        <p class="text-gray-700 mb-3">Lexuam estatutet e shoqatës tonë dhe kontolluam nëse gjithçka përputhet me ligjin.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-green-900 mb-2">Hapi 4: Rruga Zyrtare</h3>
+                        <p class="text-gray-700 mb-3">Anëtarët mund të kërkojnë një 'Mbledhje Jashtëzakonshme'. Nevojiten 1 në 5 nënshkrimet.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-green-900 mb-2">Hapi 5: Vendimi Bashkë</h3>
+                        <p class="text-gray-700 mb-3">Në mbledhje, të gjithë anëtarët mund të votojnë. Është përafrë dhe anonymous.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-16 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-green-900 mb-12 text-center">Pyetje të Shpeshta</h2>
+            <div class="space-y-6">
+                <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-900">
+                    <h3 class="text-xl font-bold text-green-900 mb-3">❓ A është kjo fitna?</h3>
+                    <p class="text-gray-700"><strong>Përgjigje: Jo!</strong> Transparenca nuk është fitna. Të bësh pyetje është një detyrë islame.</p>
+                </div>
+                <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-900">
+                    <h3 class="text-xl font-bold text-green-900 mb-3">🔐 A është votimi anonymous?</h3>
+                    <p class="text-gray-700"><strong>Përgjigje: Po!</strong> Përdorim fletë votimi që asnjë të mos shohë për kë votuam.</p>
+                </div>
+                <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-900">
+                    <h3 class="text-xl font-bold text-green-900 mb-3">💰 Si përdoren dhurata?</h3>
+                    <p class="text-gray-700"><strong>Përgjigje:</strong> Të gjitha dhurata shkojnë te xhamia. Paratë përdoren për: ndërtesën, rrymën, mësimet, aktivitetet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="poll" class="py-20 px-4 bg-gradient-to-b from-blue-50 to-green-50">
+        <div class="max-w-5xl mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <div class="inline-block bg-blue-900 text-white px-6 py-2 rounded-full mb-4 text-sm font-bold">📊 SONDAZHI DREJTPËRDREJT</div>
+                <h2 class="text-5xl font-bold text-green-900 mb-4">Modernizimi dhe Transparenca</h2>
+                <h3 class="text-3xl font-bold text-blue-900 mb-4">Tawheed Hoogstraten</h3>
+                <p class="text-gray-700 text-lg max-w-3xl mx-auto">Mendimi juaj është i rëndësishëm për komunitetin tonë. Merrni pjesë në sondazhin tonë rreth profesionalizimit të xhamisë sonë.</p>
+            </div>
+            <div class="bg-white p-12 rounded-xl shadow-2xl border-2 border-blue-200">
+                <iframe src="https://strawpoll.com/embed/polls/wby5QdOe8yA" style="width:100%;height:600px;border:none;border-radius:8px;" allowfullscreen allow="geolocation"></iframe>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6 mt-12">
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-900"><p class="text-sm text-gray-600 mb-2">TOTAL PJESËMARRËS</p><p class="text-3xl font-bold text-green-900">15+</p></div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-900"><p class="text-sm text-gray-600 mb-2">TRANSPARENCË TOTALE</p><p class="text-2xl font-bold text-blue-900">✓ Anonim</p></div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-800"><p class="text-sm text-gray-600 mb-2">ZËRI JUAJ</p><p class="text-2xl font-bold text-green-800">Rëndëson!</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="downloads" class="py-16 px-4 bg-green-50">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-green-900 mb-12 text-center">Dokumente</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <a href="statuten-en-wetten.html" class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition text-center">
+                    <div class="text-5xl mb-4">📜</div>
+                    <h3 class="text-xl font-bold text-green-900 mb-2">Statutet & Ligjet</h3>
+                    <button class="bg-green-900 text-white px-6 py-2 rounded hover:bg-green-800 font-bold">Shiko dokumentet</button>
+                </a>
+                <a href="https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=nl&la=N&cn=2019032309&table_name=wet" target="_blank" class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition text-center">
+                    <div class="text-5xl mb-4">⚖️</div>
+                    <h3 class="text-xl font-bold text-green-900 mb-2">Ligji i Shoqatës</h3>
+                    <button class="bg-green-900 text-white px-6 py-2 rounded hover:bg-green-800 font-bold">Hapje Online</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-green-900 mb-8 text-center">Keni pyetje?</h2>
+            <div class="bg-green-50 p-8 rounded-lg text-center border-2 border-green-900">
+                <h3 class="text-2xl font-bold text-green-900 mb-4">💬 Bashkohuni në Grupin tonë WhatsApp</h3>
+                <p class="text-gray-700 mb-6">Këtu mund të bëjmë pyetje bashkë dhe të ndihmojmë njëri-tjetrin.</p>
+                <a href="https://chat.whatsapp.com/GCHQpmwPs6A1Fbwcq13dTj?mode=gi_t" target="_blank" class="inline-block bg-green-900 text-white px-8 py-3 rounded hover:bg-green-800 font-bold transition text-lg">
+                    🤖 Bashkohuni në WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gradient-to-r from-green-900 to-green-800 text-white py-12 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="mb-4">🌙 <strong>Komunitet Tawheed Hoogstraten</strong></p>
+            <p class="text-green-100 mb-8">Drejt një xhamie profesionale me ndershmëri, qartësi dhe besim</p>
+            <p class="text-sm text-green-200">© 2026 Tawheed VZW. Të gjithë anëtarët punojnë bashkë për një komunitet më të fortë.</p>
+        </div>
+    </footer>
+
+    <script>
+        function changeLanguage(lang) {
+            const pages = {
+                'nl': 'index.html',
+                'en': 'index-en.html',
+                'ar': 'index-ar.html',
+                'ko': 'index-ko.html',
+                'fr': 'index-fr.html',
+                'tr': 'index-tr.html'
+            };
+            
+            if (pages[lang]) {
+                window.location.href = pages[lang];
+            }
+        }
+        
+        // Toggle mobile menu
+        function setupMobileMenu() {
+            const menuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+                
+                // Close menu when link is clicked
+                const links = mobileMenu.querySelectorAll('a');
+                links.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+        }
+        
+        // Set the language selector to current language
+        window.addEventListener('load', function() {
+            const currentFile = window.location.pathname.split('/').pop() || 'index.html';
+            const langMap = {
+                'index.html': 'nl',
+                'index-en.html': 'en',
+                'index-ar.html': 'ar',
+                'index-ko.html': 'ko',
+                'index-fr.html': 'fr',
+                'index-tr.html': 'tr'
+            };
+            
+            const select = document.getElementById('languageSelect');
+            const selectMobile = document.getElementById('languageSelectMobile');
+            
+            if (select && langMap[currentFile]) {
+                select.value = langMap[currentFile];
+            }
+            if (selectMobile && langMap[currentFile]) {
+                selectMobile.value = langMap[currentFile];
+            }
+            
+            // Setup mobile menu after page loads
+            setupMobileMenu();
+        });
+        
+        // Setup menu immediately if DOM is already ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', setupMobileMenu);
+        } else {
+            setupMobileMenu();
+        }
+    </script>
+
+</body>
+</html>

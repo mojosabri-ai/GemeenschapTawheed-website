@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tawheed VZW - Vers une Mosquée Professionnelle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Timeline styling */
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, #064e3b, #a3e635);
+        }
+        
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 25px;
+            }
+        }
+        
+        .timeline-item {
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 24px;
+            height: 24px;
+            background: #064e3b;
+            border: 4px solid white;
+            border-radius: 50%;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 0 0 4px #e5e7eb;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline-item::before {
+                left: 25px;
+            }
+        }
+        
+        .timeline-content {
+            width: 45%;
+            margin-left: auto;
+            padding-right: 50px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: 0;
+            margin-right: auto;
+            padding-right: 0;
+            padding-left: 50px;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                width: calc(100% - 65px);
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                padding-left: 50px !important;
+                padding-right: 0 !important;
+            }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    
+    <!-- Navigation -->
+    <nav class="bg-gradient-to-r from-green-900 to-green-800 text-white sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold">🌙 Tawheed</div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-4">
+                <ul class="flex gap-8 text-sm">
+                    <li><a href="#pourquoi" class="hover:text-green-200">Pourquoi?</a></li>
+                    <li><a href="#timeline" class="hover:text-green-200">Chronologie</a></li>
+                    <li><a href="#faq" class="hover:text-green-200">Questions</a></li>
+                    <li><a href="statuten-en-wetten.html" class="hover:text-green-200">Statuts</a></li>
+                    <li><a href="#contact" class="hover:text-green-200">Contact</a></li>
+                </ul>
+                <!-- Language Switcher Desktop -->
+                <select id="languageSelect" class="bg-green-800 text-white px-3 py-2 rounded text-sm cursor-pointer hover:bg-green-700" onchange="changeLanguage(this.value)">
+                    <option value="nl">🇳🇱 Nederlands</option>
+                    <option value="en">🇬🇧 English</option>
+                    <option value="ar">🇸🇦 العربية</option>
+                    <option value="ko">🇽🇰 Shqip</option>
+                    <option value="fr" selected>🇫🇷 Français</option>
+                    <option value="tr">🇹🇷 Türkçe</option>
+                </select>
+            </div>
+            
+            <!-- Mobile Menu Button & Language -->
+            <div class="md:hidden flex items-center gap-3">
+                <select id="languageSelectMobile" class="bg-green-800 text-white px-2 py-1 rounded text-xs cursor-pointer hover:bg-green-700" onchange="changeLanguage(this.value)">
+                    <option value="nl">🇳🇱</option>
+                    <option value="en">🇬🇧</option>
+                    <option value="ar">🇸🇦</option>
+                    <option value="ko">🇽🇰</option>
+                    <option value="fr" selected>🇫🇷</option>
+                    <option value="tr">🇹🇷</option>
+                </select>
+                <button id="mobileMenuBtn" class="text-2xl hover:text-green-200">☰</button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobileMenu" class="hidden md:hidden bg-green-800 px-4 py-3 space-y-2">
+            <a href="#pourquoi" class="block text-white hover:text-green-200 py-2">Pourquoi?</a>
+            <a href="#timeline" class="block text-white hover:text-green-200 py-2">Chronologie</a>
+            <a href="#faq" class="block text-white hover:text-green-200 py-2">Questions</a>
+            <a href="statuten-en-wetten.html" class="block text-white hover:text-green-200 py-2">Statuts</a>
+            <a href="#contact" class="block text-white hover:text-green-200 py-2">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-b from-green-900 to-green-800 text-white py-20 px-4">
+        <div class="max-w-4xl mx-auto text-center fade-in">
+            <h1 class="text-5xl font-bold mb-4">Vers une Mosquée Tawheed Professionnelle</h1>
+            <p class="text-xl text-green-100 mb-8">Ensemble, construire un avenir honnête et transparent</p>
+            <p class="text-lg text-green-50">Avec clarté, confiance et responsabilité partagée</p>
+        </div>
+    </section>
+
+    <!-- Section 1 -->
+    <section id="pourquoi" class="py-16 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-green-900 mb-8 text-center">Pourquoi le Changement?</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-green-50 p-8 rounded-lg border-l-4 border-green-900">
+                    <h3 class="text-2xl font-bold text-green-900 mb-4">🕌 Amanah - Responsabilité</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        En Islam, nous avons un devoir envers Allah et notre communauté. Nous devons être honnêtes avec l'argent et les décisions. C'est appelé 'Amanah' - prendre soin de ce qui nous a été confié.
+                    </p>
+                </div>
+                
+                <div class="bg-green-50 p-8 rounded-lg border-l-4 border-green-900">
+                    <h3 class="text-2xl font-bold text-green-900 mb-4">💡 Clarté & Confiance</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Les questions des membres sur l'argent et la gestion sont normales. Des réponses claires créent la confiance. La transparence signifie : tout le monde peut voir comment l'argent est utilisé.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-8 bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded">
+                <h4 class="font-bold text-yellow-900 mb-2">📋 Qu'est-ce qu'une ASBL?</h4>
+                <p class="text-gray-700">
+                    Une ASBL est une 'Association Sans But Lucratif'. Cela signifie que tout argent que nous recevons (dons) doit être utilisé pour les objectifs de la mosquée. Personne ne peut faire de profit.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Timeline -->
+    <section id="timeline" class="py-20 px-4 bg-gray-100">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-4xl font-bold text-green-900 mb-16 text-center">Le Chemin vers la Transparence</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-green-900 mb-2">Étape 1: Le Commencement</h3>
+                        <p class="text-gray-700 mb-3">
+                            Les membres ont posé des questions sur la façon dont l'argent est utilisé et comment la mosquée est gérée. C'est sain et normal.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-green-900 mb-2">Étape 2: Le Dialogue</h3>
+                        <p class="text-gray-700 mb-3">
+                            Nous avons essayé d'avoir des conversations dans des groupes WhatsApp et avons été invités à des réunions café avec le conseil.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-green-900 mb-2">Étape 3: Vérification Juridique</h3>
+                        <p class="text-gray-700 mb-3">
+                            Nous avons lu les statuts (règles) de notre ASBL et avons vérifié que tout correspond à la loi.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-green-900 mb-2">Étape 4: La Voie Officielle</h3>
+                        <p class="text-gray-700 mb-3">
+                            Les membres peuvent demander une 'Assemblée Générale Extraordinaire'. Nous avons besoin de 1 sur 5 signatures.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-green-900 mb-2">Étape 5: Décider Ensemble</h3>
+                        <p class="text-gray-700 mb-3">
+                            À la réunion, tous les membres peuvent voter sur les questions importantes. Cela se fait de manière juste et anonyme.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: FAQ -->
+    <section id="faq" class="py-16 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-green-900 mb-12 text-center">Questions Fréquemment Posées</h2>
+            
+            <div class="space-y-6">
+                <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-900">
+                    <h3 class="text-xl font-bold text-green-900 mb-3">❓ Est-ce une fitna (conflit)?</h3>
+                    <p class="text-gray-700">
+                        <strong>Réponse: Non!</strong> La transparence n'est pas un conflit. Poser des questions et être honnête est un devoir islamique.
+                    </p>
+                </div>
+
+                <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-900">
+                    <h3 class="text-xl font-bold text-green-900 mb-3">🔐 Le vote est-il anonyme?</h3>
+                    <p class="text-gray-700">
+                        <strong>Réponse: Oui!</strong> Nous utilisons des bulletins de vote pour que personne ne puisse voir comment vous avez voté.
+                    </p>
+                </div>
+
+                <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-900">
+                    <h3 class="text-xl font-bold text-green-900 mb-3">💰 Que se passe-t-il avec les dons?</h3>
+                    <p class="text-gray-700">
+                        <strong>Réponse:</strong> Tous les dons vont à la mosquée. L'argent est utilisé pour: le bâtiment, l'électricité, les cours, les activités.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Poll -->
+    <section id="poll" class="py-20 px-4 bg-gradient-to-b from-blue-50 to-green-50">
+        <div class="max-w-5xl mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <div class="inline-block bg-blue-900 text-white px-6 py-2 rounded-full mb-4 text-sm font-bold">📊 SONDAGE EN DIRECT</div>
+                <h2 class="text-5xl font-bold text-green-900 mb-4">Modernisation et Transparence</h2>
+                <h3 class="text-3xl font-bold text-blue-900 mb-4">Tawheed Hoogstraten</h3>
+                <p class="text-gray-700 text-lg max-w-3xl mx-auto">Votre avis est important pour notre communauté. Participez à notre sondage actuel sur la professionnalisation de notre mosquée.</p>
+            </div>
+            
+            <!-- Poll Container -->
+            <div class="bg-white p-12 rounded-xl shadow-2xl border-2 border-blue-200">
+                <iframe 
+                    src="https://strawpoll.com/embed/polls/wby5QdOe8yA" 
+                    style="width:100%;height:600px;border:none;border-radius:8px;" 
+                    allowfullscreen 
+                    allow="geolocation">
+                </iframe>
+            </div>
+            
+            <!-- Info Box -->
+            <div class="grid md:grid-cols-3 gap-6 mt-12">
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-900">
+                    <p class="text-sm text-gray-600 mb-2">TOTAL PARTICIPANTS</p>
+                    <p class="text-3xl font-bold text-green-900">15+</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-900">
+                    <p class="text-sm text-gray-600 mb-2">TRANSPARENCE TOTALE</p>
+                    <p class="text-2xl font-bold text-blue-900">✓ Anonyme</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-800">
+                    <p class="text-sm text-gray-600 mb-2">VOTRE VOIX</p>
+                    <p class="text-2xl font-bold text-green-800">Compte!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Documents -->
+    <section id="downloads" class="py-16 px-4 bg-green-50">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-green-900 mb-12 text-center">Documents</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <a href="statuten-en-wetten.html" class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition text-center">
+                    <div class="text-5xl mb-4">📜</div>
+                    <h3 class="text-xl font-bold text-green-900 mb-2">Statuts & Lois</h3>
+                    <p class="text-gray-600 mb-4">Tous les documents officiels de Tawheed VZW.</p>
+                    <button class="bg-green-900 text-white px-6 py-2 rounded hover:bg-green-800 font-bold">Voir tous les documents</button>
+                </a>
+
+                <a href="https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=nl&la=N&cn=2019032309&table_name=wet" target="_blank" class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition text-center">
+                    <div class="text-5xl mb-4">⚖️</div>
+                    <h3 class="text-xl font-bold text-green-900 mb-2">Loi ASBL Officielle</h3>
+                    <p class="text-gray-600 mb-4">Le Code des sociétés et des associations belges.</p>
+                    <button class="bg-green-900 text-white px-6 py-2 rounded hover:bg-green-800 font-bold">Ouvrir en ligne</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-green-900 mb-8 text-center">Avez-vous des questions?</h2>
+            
+            <div class="bg-green-50 p-8 rounded-lg text-center border-2 border-green-900">
+                <h3 class="text-2xl font-bold text-green-900 mb-4">💬 Rejoignez Notre Groupe WhatsApp</h3>
+                <p class="text-gray-700 mb-6">Ici, nous pouvons poser des questions ensemble et nous entraider.</p>
+                <a href="https://chat.whatsapp.com/GCHQpmwPs6A1Fbwcq13dTj?mode=gi_t" target="_blank" class="inline-block bg-green-900 text-white px-8 py-3 rounded hover:bg-green-800 font-bold transition text-lg">
+                    🤖 Rejoindre le Groupe WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-green-900 to-green-800 text-white py-12 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="mb-4">🌙 <strong>Communauté Tawheed Hoogstraten</strong></p>
+            <p class="text-green-100 mb-8">Vers une mosquée professionnelle avec honnêteté, clarté et confiance</p>
+            <p class="text-sm text-green-200">© 2026 Tawheed VZW. Tous les membres travaillent ensemble pour une communauté plus forte.</p>
+        </div>
+    </footer>
+
+    <script>
+        function changeLanguage(lang) {
+            const pages = {
+                'nl': 'index.html',
+                'en': 'index-en.html',
+                'ar': 'index-ar.html',
+                'ko': 'index-ko.html',
+                'fr': 'index-fr.html',
+                'tr': 'index-tr.html'
+            };
+            
+            if (pages[lang]) {
+                window.location.href = pages[lang];
+            }
+        }
+        
+        // Toggle mobile menu
+        function setupMobileMenu() {
+            const menuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+                
+                // Close menu when link is clicked
+                const links = mobileMenu.querySelectorAll('a');
+                links.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+        }
+        
+        // Set the language selector to current language
+        window.addEventListener('load', function() {
+            const currentFile = window.location.pathname.split('/').pop() || 'index.html';
+            const langMap = {
+                'index.html': 'nl',
+                'index-en.html': 'en',
+                'index-ar.html': 'ar',
+                'index-ko.html': 'ko',
+                'index-fr.html': 'fr',
+                'index-tr.html': 'tr'
+            };
+            
+            const select = document.getElementById('languageSelect');
+            const selectMobile = document.getElementById('languageSelectMobile');
+            
+            if (select && langMap[currentFile]) {
+                select.value = langMap[currentFile];
+            }
+            if (selectMobile && langMap[currentFile]) {
+                selectMobile.value = langMap[currentFile];
+            }
+            
+            // Setup mobile menu after page loads
+            setupMobileMenu();
+        });
+        
+        // Setup menu immediately if DOM is already ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', setupMobileMenu);
+        } else {
+            setupMobileMenu();
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tawheed VZW - نحو مسجد احترافي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { direction: rtl; }
+        .timeline { position: relative; padding: 20px 0; }
+        .timeline::before { content: ''; position: absolute; right: 50%; transform: translateX(50%); width: 4px; height: 100%; background: linear-gradient(to bottom, #064e3b, #a3e635); }
+        @media (max-width: 768px) { .timeline::before { right: 25px; left: auto; } }
+        .timeline-item { margin-bottom: 50px; position: relative; }
+        .timeline-item::before { content: ''; position: absolute; right: 50%; transform: translateX(50%); width: 24px; height: 24px; background: #064e3b; border: 4px solid white; border-radius: 50%; top: 0; z-index: 10; box-shadow: 0 0 0 4px #e5e7eb; }
+        @media (max-width: 768px) { .timeline-item::before { right: 25px; left: auto; } }
+        .timeline-content { width: 45%; margin-right: auto; padding-left: 50px; text-align: right; }
+        .timeline-item:nth-child(even) .timeline-content { margin-right: 0; margin-left: auto; padding-left: 0; padding-right: 50px; text-align: left; }
+        @media (max-width: 768px) { .timeline-content, .timeline-item:nth-child(even) .timeline-content { width: calc(100% - 65px); margin-right: 0 !important; margin-left: 0 !important; padding-left: 50px !important; padding-right: 0 !important; } }
+        .fade-in { animation: fadeIn 0.8s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <nav class="bg-gradient-to-r from-green-900 to-green-800 text-white sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <select id="languageSelectMobile" class="bg-green-800 text-white px-2 py-1 rounded text-xs cursor-pointer hover:bg-green-700 md:hidden" onchange="changeLanguage(this.value)">
+                <option value="nl">🇳🇱</option>
+                <option value="en">🇬🇧</option>
+                <option value="ar" selected>🇸🇦</option>
+                <option value="ko">🇽🇰</option>
+                <option value="fr">🇫🇷</option>
+                <option value="tr">🇹🇷</option>
+            </select>
+            <div class="text-2xl font-bold">🌙 Tawheed</div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-4">
+                <ul class="flex gap-8 text-sm">
+                    <li><a href="#why" class="hover:text-green-200">لماذا؟</a></li>
+                    <li><a href="#timeline" class="hover:text-green-200">المسار الزمني</a></li>
+                    <li><a href="#faq" class="hover:text-green-200">أسئلة</a></li>
+                    <li><a href="statuten-en-wetten.html" class="hover:text-green-200">النظام الأساسي</a></li>
+                    <li><a href="#contact" class="hover:text-green-200">اتصل</a></li>
+                </ul>
+                <select id="languageSelect" class="bg-green-800 text-white px-3 py-2 rounded text-sm cursor-pointer hover:bg-green-700" onchange="changeLanguage(this.value)">
+                    <option value="nl">🇳🇱 Nederlands</option>
+                    <option value="en">🇬🇧 English</option>
+                    <option value="ar" selected>🇸🇦 العربية</option>
+                    <option value="ko">🇽🇰 Shqip</option>
+                    <option value="fr">🇫🇷 Français</option>
+                    <option value="tr">🇹🇷 Türkçe</option>
+                </select>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobileMenuBtn" class="text-2xl hover:text-green-200 md:hidden">☰</button>
+        </div>
+        
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobileMenu" class="hidden md:hidden bg-green-800 px-4 py-3 space-y-2">
+            <a href="#why" class="block text-white hover:text-green-200 py-2">لماذا؟</a>
+            <a href="#timeline" class="block text-white hover:text-green-200 py-2">المسار الزمني</a>
+            <a href="#faq" class="block text-white hover:text-green-200 py-2">أسئلة</a>
+            <a href="statuten-en-wetten.html" class="block text-white hover:text-green-200 py-2">النظام الأساسي</a>
+            <a href="#contact" class="block text-white hover:text-green-200 py-2">اتصل</a>
+        </div>
+    </nav>
+
+    <section class="bg-gradient-to-b from-green-900 to-green-800 text-white py-20 px-4">
+        <div class="max-w-4xl mx-auto text-center fade-in">
+            <h1 class="text-5xl font-bold mb-4">نحو مسجد توحيد احترافي</h1>
+            <p class="text-xl text-green-100 mb-8">معاً نبني مستقبلاً شريفاً وشفافاً</p>
+            <p class="text-lg text-green-50">بوضوح وثقة ومسؤولية مشتركة</p>
+        </div>
+    </section>
+
+    <section id="why" class="py-16 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-green-900 mb-8 text-center">لماذا التغيير؟</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-green-50 p-8 rounded-lg border-r-4 border-green-900">
+                    <h3 class="text-2xl font-bold text-green-900 mb-4">🕌 الأمانة - المسؤولية</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        في الإسلام، لدينا واجب تجاه الله وتجاه مجتمعنا. يجب أن نكون صادقين مع المال والقرارات. هذا يسمى 'الأمانة'.
+                    </p>
+                </div>
+                <div class="bg-green-50 p-8 rounded-lg border-r-4 border-green-900">
+                    <h3 class="text-2xl font-bold text-green-900 mb-4">💡 الوضوح والثقة</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        أسئلة الأعضاء حول المال والإدارة طبيعية. الإجابات الواضحة تبني الثقة. الشفافية تعني: يمكن للجميع أن يروا كيف يتم استخدام الأموال.
+                    </p>
+                </div>
+            </div>
+            <div class="mt-8 bg-yellow-50 border-r-4 border-yellow-500 p-6 rounded">
+                <h4 class="font-bold text-yellow-900 mb-2">📋 ما هي جمعية غير ربحية؟</h4>
+                <p class="text-gray-700">
+                    جمعية غير ربحية تعني أن جميع الأموال التي تحصل عليها يجب أن تُستخدم لأغراض المسجد. لا يمكن لأحد أن يجني أرباحاً.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="timeline" class="py-20 px-4 bg-gray-100">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-4xl font-bold text-green-900 mb-16 text-center">الطريق نحو الشفافية</h2>
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-green-900 mb-2">الخطوة 1: البداية</h3>
+                        <p class="text-gray-700 mb-3">طرح الأعضاء أسئلة حول كيفية استخدام الأموال. هذا أمر صحي وطبيعي.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-green-900 mb-2">الخطوة 2: الحوار</h3>
+                        <p class="text-gray-700 mb-3">حاولنا إجراء محادثات في مجموعات WhatsApp وتم دعوتنا لاجتماعات قهوة مع مجلس الإدارة.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-green-900 mb-2">الخطوة 3: الفحص القانوني</h3>
+                        <p class="text-gray-700 mb-3">قرأنا النظام الأساسي (القواعد) لجمعيتنا وتحققنا من أن كل شيء يتوافق مع القانون.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-green-900 mb-2">الخطوة 4: الطريق الرسمي</h3>
+                        <p class="text-gray-700 mb-3">يمكن للأعضاء طلب 'جمعية عامة غير عادية'. نحتاج إلى 1 من كل 5 توقيعات.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-green-900 mb-2">الخطوة 5: القرار معاً</h3>
+                        <p class="text-gray-700 mb-3">في الاجتماع، يمكن لجميع الأعضاء التصويت على المسائل المهمة. بطريقة عادلة وسرية.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-16 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-green-900 mb-12 text-center">الأسئلة الشائعة</h2>
+            <div class="space-y-6">
+                <div class="bg-green-50 p-6 rounded-lg border-r-4 border-green-900">
+                    <h3 class="text-xl font-bold text-green-900 mb-3">❓ هل هذا فتنة؟</h3>
+                    <p class="text-gray-700"><strong>الجواب: لا!</strong> الشفافية ليست فتنة. طرح الأسئلة والصدق واجب إسلامي.</p>
+                </div>
+                <div class="bg-green-50 p-6 rounded-lg border-r-4 border-green-900">
+                    <h3 class="text-xl font-bold text-green-900 mb-3">🔐 هل التصويت سري؟</h3>
+                    <p class="text-gray-700"><strong>الجواب: نعم!</strong> نستخدم ورقات التصويت حتى لا يتمكن أحد من معرفة كيف صوت الآخرون.</p>
+                </div>
+                <div class="bg-green-50 p-6 rounded-lg border-r-4 border-green-900">
+                    <h3 class="text-xl font-bold text-green-900 mb-3">💰 ماذا يحدث مع التبرعات؟</h3>
+                    <p class="text-gray-700"><strong>الجواب:</strong> جميع التبرعات تذهب إلى المسجد. يتم استخدام الأموال للبناء والكهرباء والدروس والأنشطة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="poll" class="py-20 px-4 bg-gradient-to-b from-blue-50 to-green-50">
+        <div class="max-w-5xl mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <div class="inline-block bg-blue-900 text-white px-6 py-2 rounded-full mb-4 text-sm font-bold">📊 استطلاع مباشر</div>
+                <h2 class="text-5xl font-bold text-green-900 mb-4">التحديث والشفافية</h2>
+                <h3 class="text-3xl font-bold text-blue-900 mb-4">توحيد هوخشترايتن</h3>
+                <p class="text-gray-700 text-lg max-w-3xl mx-auto">رأيك مهم لمجتمعنا. شارك في استطلاعنا حول تحسين مسجدنا الاحترافي.</p>
+            </div>
+            <div class="bg-white p-12 rounded-xl shadow-2xl border-2 border-blue-200">
+                <iframe src="https://strawpoll.com/embed/polls/wby5QdOe8yA" style="width:100%;height:600px;border:none;border-radius:8px;" allowfullscreen allow="geolocation"></iframe>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6 mt-12">
+                <div class="bg-white p-6 rounded-lg shadow-md border-r-4 border-green-900"><p class="text-sm text-gray-600 mb-2">إجمالي المشاركين</p><p class="text-3xl font-bold text-green-900">15+</p></div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-r-4 border-blue-900"><p class="text-sm text-gray-600 mb-2">شفافية كاملة</p><p class="text-2xl font-bold text-blue-900">✓ سري</p></div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-r-4 border-green-800"><p class="text-sm text-gray-600 mb-2">صوتك</p><p class="text-2xl font-bold text-green-800">مهم!</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="downloads" class="py-16 px-4 bg-green-50">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-green-900 mb-12 text-center">المستندات</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <a href="statuten-en-wetten.html" class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition text-center">
+                    <div class="text-5xl mb-4">📜</div>
+                    <h3 class="text-xl font-bold text-green-900 mb-2">النظام الأساسي والقوانين</h3>
+                    <button class="bg-green-900 text-white px-6 py-2 rounded hover:bg-green-800 font-bold">عرض المستندات</button>
+                </a>
+                <a href="https://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=nl&la=N&cn=2019032309&table_name=wet" target="_blank" class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition text-center">
+                    <div class="text-5xl mb-4">⚖️</div>
+                    <h3 class="text-xl font-bold text-green-900 mb-2">قانون الجمعيات</h3>
+                    <button class="bg-green-900 text-white px-6 py-2 rounded hover:bg-green-800 font-bold">افتح على الإنترنت</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-green-900 mb-8 text-center">هل لديك أسئلة؟</h2>
+            <div class="bg-green-50 p-8 rounded-lg text-center border-2 border-green-900">
+                <h3 class="text-2xl font-bold text-green-900 mb-4">💬 انضم إلى مجموعة WhatsApp</h3>
+                <p class="text-gray-700 mb-6">هنا يمكننا طرح الأسئلة معاً ومساعدة بعضنا البعض.</p>
+                <a href="https://chat.whatsapp.com/GCHQpmwPs6A1Fbwcq13dTj?mode=gi_t" target="_blank" class="inline-block bg-green-900 text-white px-8 py-3 rounded hover:bg-green-800 font-bold transition text-lg">
+                    🤖 انضم إلى WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gradient-to-r from-green-900 to-green-800 text-white py-12 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="mb-4">🌙 <strong>مجتمع توحيد هوجسترايتن</strong></p>
+            <p class="text-green-100 mb-8">نحو مسجد احترافي بصدق وشفافية وثقة</p>
+            <p class="text-sm text-green-200">© 2026 Tawheed VZW. جميع الأعضاء يعملون معاً لتحقيق مجتمع أقوى.</p>
+        </div>
+    </footer>
+
+    <script>
+        function changeLanguage(lang) {
+            const pages = {
+                'nl': 'index.html',
+                'en': 'index-en.html',
+                'ar': 'index-ar.html',
+                'ko': 'index-ko.html',
+                'fr': 'index-fr.html',
+                'tr': 'index-tr.html'
+            };
+            
+            if (pages[lang]) {
+                window.location.href = pages[lang];
+            }
+        }
+        
+        // Toggle mobile menu
+        function setupMobileMenu() {
+            const menuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+                
+                // Close menu when link is clicked
+                const links = mobileMenu.querySelectorAll('a');
+                links.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+        }
+        
+        // Set the language selector to current language
+        window.addEventListener('load', function() {
+            const currentFile = window.location.pathname.split('/').pop() || 'index.html';
+            const langMap = {
+                'index.html': 'nl',
+                'index-en.html': 'en',
+                'index-ar.html': 'ar',
+                'index-ko.html': 'ko',
+                'index-fr.html': 'fr',
+                'index-tr.html': 'tr'
+            };
+            
+            const select = document.getElementById('languageSelect');
+            const selectMobile = document.getElementById('languageSelectMobile');
+            
+            if (select && langMap[currentFile]) {
+                select.value = langMap[currentFile];
+            }
+            if (selectMobile && langMap[currentFile]) {
+                selectMobile.value = langMap[currentFile];
+            }
+            
+            // Setup mobile menu after page loads
+            setupMobileMenu();
+        });
+        
+        // Setup menu immediately if DOM is already ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', setupMobileMenu);
+        } else {
+            setupMobileMenu();
+        }
+    </script>
+
+</body>
+</html>
