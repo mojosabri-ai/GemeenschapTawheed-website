@@ -12,13 +12,50 @@
     <nav class="bg-gradient-to-r from-green-900 to-green-800 text-white sticky top-0 z-50 shadow-lg">
         <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
             <div class="text-2xl font-bold">🌙 Tawheed</div>
-            <ul class="hidden md:flex gap-8 text-sm">
-                <li><a href="index.html" class="hover:text-green-200">Home</a></li>
-                <li><a href="index.html#waarom" class="hover:text-green-200">Waarom?</a></li>
-                <li><a href="index.html#timeline" class="hover:text-green-200">Tijdlijn</a></li>
-                <li><a href="statuten-en-wetten.html" class="hover:text-green-200">Statuten</a></li>
-                <li><a href="index.html#contact" class="hover:text-green-200">Contact</a></li>
-            </ul>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-4">
+                <ul class="flex gap-8 text-sm">
+                    <li><a href="index.html" class="hover:text-green-200">Home</a></li>
+                    <li><a href="index.html#waarom" class="hover:text-green-200">Waarom?</a></li>
+                    <li><a href="index.html#timeline" class="hover:text-green-200">Tijdlijn</a></li>
+                    <li><a href="index.html#faq" class="hover:text-green-200">Vragen</a></li>
+                    <li><a href="statuten-en-wetten.html" class="hover:text-green-200">Statuten</a></li>
+                    <li><a href="index.html#contact" class="hover:text-green-200">Contact</a></li>
+                </ul>
+                <!-- Language Switcher Desktop -->
+                <select id="languageSelect" class="bg-green-800 text-white px-3 py-2 rounded text-sm cursor-pointer hover:bg-green-700" onchange="changeLanguage(this.value)">
+                    <option value="nl" selected>🇳🇱 Nederlands</option>
+                    <option value="en">🇬🇧 English</option>
+                    <option value="ar">🇸🇦 العربية</option>
+                    <option value="ko">🇽🇰 Shqip</option>
+                    <option value="fr">🇫🇷 Français</option>
+                    <option value="tr">🇹🇷 Türkçe</option>
+                </select>
+            </div>
+            
+            <!-- Mobile Menu Button & Language -->
+            <div class="md:hidden flex items-center gap-3">
+                <select id="languageSelectMobile" class="bg-green-800 text-white px-2 py-1 rounded text-xs cursor-pointer hover:bg-green-700" onchange="changeLanguage(this.value)">
+                    <option value="nl" selected>🇳🇱</option>
+                    <option value="en">🇬🇧</option>
+                    <option value="ar">🇸🇦</option>
+                    <option value="ko">🇽🇰</option>
+                    <option value="fr">🇫🇷</option>
+                    <option value="tr">🇹🇷</option>
+                </select>
+                <button id="mobileMenuBtn" class="text-2xl hover:text-green-200" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">☰</button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobileMenu" class="hidden md:hidden bg-green-800 px-4 py-3 space-y-2">
+            <a href="index.html" class="block text-white hover:text-green-200 py-2" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Home</a>
+            <a href="index.html#waarom" class="block text-white hover:text-green-200 py-2" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Waarom?</a>
+            <a href="index.html#timeline" class="block text-white hover:text-green-200 py-2" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Tijdlijn</a>
+            <a href="index.html#faq" class="block text-white hover:text-green-200 py-2" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Vragen</a>
+            <a href="statuten-en-wetten.html" class="block text-white hover:text-green-200 py-2" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Statuten</a>
+            <a href="index.html#contact" class="block text-white hover:text-green-200 py-2" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Contact</a>
         </div>
     </nav>
 
@@ -255,6 +292,37 @@
             </p>
         </div>
     </footer>
+
+    <script>
+        function changeLanguage(lang) {
+            const pages = {
+                'nl': 'statuten-en-wetten.html',
+                'en': 'statuten-en-wetten.html',
+                'ar': 'statuten-en-wetten.html',
+                'ko': 'statuten-en-wetten.html',
+                'fr': 'statuten-en-wetten.html',
+                'tr': 'statuten-en-wetten.html'
+            };
+            
+            if (pages[lang] && lang !== 'nl') {
+                // For now, keep all on Dutch version - this can be expanded with translations
+                window.location.href = pages[lang];
+            }
+        }
+        
+        // Set the language selector to current language on page load
+        window.addEventListener('load', function() {
+            const select = document.getElementById('languageSelect');
+            const selectMobile = document.getElementById('languageSelectMobile');
+            
+            if (select) {
+                select.value = 'nl';
+            }
+            if (selectMobile) {
+                selectMobile.value = 'nl';
+            }
+        });
+    </script>
 
 </body>
 </html>
