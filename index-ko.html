@@ -17,6 +17,15 @@
         @media (max-width: 768px) { .timeline-content, .timeline-item:nth-child(even) .timeline-content { width: calc(100% - 65px); margin-left: 0 !important; margin-right: 0 !important; padding-left: 50px !important; padding-right: 0 !important; } }
         .fade-in { animation: fadeIn 0.8s ease-in; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .current-state { position: relative; padding: 40px 0; }
+        .current-state::after { content: ''; position: absolute; bottom: -30px; left: 50%; transform: translateX(-50%); width: 4px; height: 60px; background: linear-gradient(to bottom, #9ca3af, #d1d5db); }
+        @media (max-width: 768px) { .current-state::after { left: 25px; } }
+        .state-item { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px; }
+        @media (max-width: 768px) { .state-item { grid-template-columns: 1fr; } }
+        .state-block { background: white; padding: 24px; border-radius: 8px; border-left: 4px solid #dc2626; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .state-month { display: inline-block; background: #dc2626; color: white; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: bold; margin-bottom: 8px; }
+        .transition-arrow { text-align: center; margin: 40px 0 20px 0; font-size: 28px; color: #9ca3af; }
+        .transition-text { background: linear-gradient(135deg, #f3f4f6, #e5e7eb); border-left: 4px solid #064e3b; padding: 20px 24px; border-radius: 8px; text-align: center; font-style: italic; color: #374151; margin-top: 30px; font-size: 16px; font-weight: 500; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -101,6 +110,43 @@
         </div>
     </section>
 
+    <!-- Pjesa 2A: Bllokuesi Aktual - Gjendje Aktuale -->
+    <section id="current-state" class="py-16 px-4 bg-gray-100">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-4xl font-bold text-red-700 mb-4 text-center">🔒 Bllokuesi Aktual</h2>
+            <p class="text-center text-gray-700 mb-12 text-lg">Fakte të Fundit nga Korrespondenca (Shkurt - Prill 2026)</p>
+            <div class="current-state">
+                <div class="state-item">
+                    <div class="state-block">
+                        <div class="state-month">SHKURT 2026</div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Kërkesë për Qasje</h3>
+                        <p class="text-gray-700 text-sm leading-relaxed">Një kërkesë formale për të drejtën e qasjes sipas Nenit 33 të Statuteve dhe ligjit VZW u paraqit. Ky është i drejta e secilit anëtar për të marrë një pasqyrë të administrimit dhe financave të xamit.</p>
+                    </div>
+                    <div class="state-block">
+                        <div class="state-month">MARS 2026</div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Neglizhencë Administrative</h3>
+                        <p class="text-gray-700 text-sm leading-relaxed">Pavarësisht afatit ligjor prej një muaji, nuk pati asnjë përgjigje ose ftesë nga bordi. Ligji kërkosi që bordi të përgjigjet brenda 30 ditësh. Kjo nuk ndodhi.</p>
+                    </div>
+                </div>
+                <div class="state-item">
+                    <div class="state-block">
+                        <div class="state-month">PRILL 2026</div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Mohim i të Drejtave</h3>
+                        <p class="text-gray-700 text-sm leading-relaxed">Në një përgjigje formale, bordi konteston statusin e anëtarësisë të kërkuesit për të refuzuar të drejtën e qasjes. Kjo është një shkelje e Nenit 33 të Statuteve i cili garanton të drejtën e qasjes.</p>
+                    </div>
+                    <div class="state-block">
+                        <div class="state-month">PRILL 2026</div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Përjashtim Financiar</h3>
+                        <p class="text-gray-700 text-sm leading-relaxed">Pagesat e kontributit prej 200€ po kthehen nga bordi si 'të padhurueshmë'. Kjo bëhet për të shmangur njohjen juridike si anëtar dhe kështu për të refuzuar të drejtën e qasjes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="transition-arrow">↓ ↓ ↓</div>
+            <div class="transition-text">🌱 Sepse rruga aktuale është e bllokuar, zgjedhim një rrugë të re drejt transparencës</div>
+        </div>
+    </section>
+
+    <!-- Pjesa 2: Kronologjia -->
     <section id="timeline" class="py-20 px-4 bg-gray-100">
         <div class="max-w-5xl mx-auto">
             <h2 class="text-4xl font-bold text-green-900 mb-16 text-center">Rruga Drejt Transparencës</h2>

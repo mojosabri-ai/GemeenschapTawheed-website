@@ -92,6 +92,81 @@
                 transform: translateY(0);
             }
         }
+
+        /* Current State Styling */
+        .current-state {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .current-state::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 60px;
+            background: linear-gradient(to bottom, #9ca3af, #d1d5db);
+        }
+
+        @media (max-width: 768px) {
+            .current-state::after {
+                left: 25px;
+            }
+        }
+
+        .state-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .state-item {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .state-block {
+            background: white;
+            padding: 24px;
+            border-radius: 8px;
+            border-left: 4px solid #dc2626;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .state-month {
+            display: inline-block;
+            background: #dc2626;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .transition-arrow {
+            text-align: center;
+            margin: 40px 0 20px 0;
+            font-size: 28px;
+            color: #9ca3af;
+        }
+
+        .transition-text {
+            background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+            border-left: 4px solid #064e3b;
+            padding: 20px 24px;
+            border-radius: 8px;
+            text-align: center;
+            font-style: italic;
+            color: #374151;
+            margin-top: 30px;
+            font-size: 16px;
+            font-weight: 500;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -180,6 +255,60 @@
                 <p class="text-gray-700">
                     Tawheed is a Non-Profit Association (VZW). This means all activities are dedicated to the community. There is no profit motive; all received resources are fully deployed for the realization of the objectives.
                 </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2A: Current Blockade - Current State -->
+    <section id="current-state" class="py-16 px-4 bg-gray-100">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-4xl font-bold text-red-700 mb-4 text-center">🔒 The Current Blockade</h2>
+            <p class="text-center text-gray-700 mb-12 text-lg">Recent facts from correspondence (February - April 2026)</p>
+            
+            <div class="current-state">
+                <!-- Row 1 -->
+                <div class="state-item">
+                    <div class="state-block">
+                        <div class="state-month">FEBRUARY 2026</div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Request for Access</h3>
+                        <p class="text-gray-700 text-sm leading-relaxed">
+                            A formal request for access rights under Article 33 of the statutes and the VZW law was submitted. This is the right of every member to gain insight into the administration and finances of the mosque. This right is connected to article 33 of the statutes.
+                        </p>
+                    </div>
+                    
+                    <div class="state-block">
+                        <div class="state-month">MARCH 2026</div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Administrative Negligence</h3>
+                        <p class="text-gray-700 text-sm leading-relaxed">
+                            Despite the legal deadline of one month, no response or invitation from the board was provided. The law requires the board to respond within 30 days. This did not happen.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="state-item">
+                    <div class="state-block">
+                        <div class="state-month">APRIL 2026</div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Denial of Rights</h3>
+                        <p class="text-gray-700 text-sm leading-relaxed">
+                            In a formal response, the board contests the membership status of the requester to refuse access rights. This is a violation of article 33 of the statutes which guarantees access rights.
+                        </p>
+                    </div>
+                    
+                    <div class="state-block">
+                        <div class="state-month">APRIL 2026</div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Financial Exclusion</h3>
+                        <p class="text-gray-700 text-sm leading-relaxed">
+                            Contribution payments of €200 are being returned by the board as 'undue'. This is done to avoid legal recognition as a member and thus refuse access rights.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transition to Timeline -->
+            <div class="transition-arrow">↓ ↓ ↓</div>
+            <div class="transition-text">
+                🌱 Because the current path is blocked, we choose a new path to openness
             </div>
         </div>
     </section>

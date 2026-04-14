@@ -92,6 +92,81 @@
                 transform: translateY(0);
             }
         }
+
+        /* Current State Styling */
+        .current-state {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .current-state::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 60px;
+            background: linear-gradient(to bottom, #9ca3af, #d1d5db);
+        }
+
+        @media (max-width: 768px) {
+            .current-state::after {
+                left: 25px;
+            }
+        }
+
+        .state-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .state-item {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .state-block {
+            background: white;
+            padding: 24px;
+            border-radius: 8px;
+            border-left: 4px solid #dc2626;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .state-month {
+            display: inline-block;
+            background: #dc2626;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .transition-arrow {
+            text-align: center;
+            margin: 40px 0 20px 0;
+            font-size: 28px;
+            color: #9ca3af;
+        }
+
+        .transition-text {
+            background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+            border-left: 4px solid #064e3b;
+            padding: 20px 24px;
+            border-radius: 8px;
+            text-align: center;
+            font-style: italic;
+            color: #374151;
+            margin-top: 30px;
+            font-size: 16px;
+            font-weight: 500;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -180,6 +255,60 @@
                 <p class="text-gray-700">
                     Tawheed is een Vereniging zonder Winstoogmerk (VZW). Dit betekent dat alle activiteiten in het teken staan van de gemeenschap. Er is geen winstoogmerk; alle ontvangen middelen worden volledig ingezet voor de realisatie van de doelstellingen.
                 </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sectie 2A: Huidige Blokkade - Current State -->
+    <section id="current-state" class="py-16 px-4 bg-gray-100">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-4xl font-bold text-red-700 mb-4 text-center">🔒 De Huidige Blokkade</h2>
+            <p class="text-center text-gray-700 mb-12 text-lg">Recente feiten uit correspondentie (Februari - April 2026)</p>
+            
+            <div class="current-state">
+                <!-- Row 1 -->
+                <div class="state-item">
+                    <div class="state-block">
+                        <div class="state-month">FEBRUARI 2026</div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Verzoek om Inzage</h3>
+                        <p class="text-gray-700 text-sm leading-relaxed">
+                            Een formeel verzoek tot inzagerecht conform Artikel 33 van de statuten en het WVV werd ingediend. Dit is het recht van elk lid om inzicht te krijgen in de administratie en financiën van de moskee. Dit recht staat verbonden aan artikel 33 van de statuten.
+                        </p>
+                    </div>
+                    
+                    <div class="state-block">
+                        <div class="state-month">MAART 2026</div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Bestuurlijke Nalatigheid</h3>
+                        <p class="text-gray-700 text-sm leading-relaxed">
+                            Ondanks de wettelijke termijn van één maand bleef elke reactie of uitnodiging vanuit het bestuur uit. De wet vereist dat het bestuur binnen 30 dagen moet antwoorden. Dit gebeurde niet.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="state-item">
+                    <div class="state-block">
+                        <div class="state-month">APRIL 2026</div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Ontzegging van Rechten</h3>
+                        <p class="text-gray-700 text-sm leading-relaxed">
+                            In een formele reactie betwist het bestuur het lidmaatschap van de verzoeker om inzagerecht te weigeren. Dit is een schending van artikel 33 van de statuten die het inzagerecht garandeert.
+                        </p>
+                    </div>
+                    
+                    <div class="state-block">
+                        <div class="state-month">APRIL 2026</div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Financiële Uitsluiting</h3>
+                        <p class="text-gray-700 text-sm leading-relaxed">
+                            Contributiebetalingen van €200,- worden door het bestuur als 'onverschuldigd' teruggestort. Dit gebeurt om juridische erkenning als lid te ontwijken en zo inzagerecht te weigeren.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transition to Timeline -->
+            <div class="transition-arrow">↓ ↓ ↓</div>
+            <div class="transition-text">
+                🌱 Omdat de huidige weg geblokkeerd is, kiezen wij voor een nieuw pad naar openheid
             </div>
         </div>
     </section>
