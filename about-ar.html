@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معلومات عنا - Tawheed VZW</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        body {
+            direction: rtl;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    
+    <!-- Navigation -->
+    <nav class="bg-gradient-to-r from-green-900 to-green-800 text-white sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold">🌙 Tawheed</div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-4">
+                <ul class="flex gap-8 text-sm">
+                    <li><a href="index-ar.html" class="hover:text-green-200">الرئيسية</a></li>
+                    <li><a href="about-ar.html" class="hover:text-green-200 font-bold text-green-300">معلومات عنا</a></li>
+                    <li><a href="index-ar.html#waarom" class="hover:text-green-200">لماذا؟</a></li>
+                    <li><a href="index-ar.html#timeline" class="hover:text-green-200">الجدول الزمني</a></li>
+                    <li><a href="statuten-en-wetten.html" class="hover:text-green-200">الأنظمة</a></li>
+                    <li><a href="index-ar.html#contact" class="hover:text-green-200">اتصل</a></li>
+                </ul>
+                <!-- Language Switcher Desktop -->
+                <select id="languageSelect" class="bg-green-800 text-white px-3 py-2 rounded text-sm cursor-pointer hover:bg-green-700" onchange="changeLanguage(this.value)">
+                    <option value="nl">🇳🇱 Nederlands</option>
+                    <option value="en">🇬🇧 English</option>
+                    <option value="ar" selected>🇸🇦 العربية</option>
+                    <option value="ko">🇽🇰 Shqip</option>
+                    <option value="fr">🇫🇷 Français</option>
+                    <option value="tr">🇹🇷 Türkçe</option>
+                </select>
+            </div>
+            
+            <!-- Mobile Menu Button & Language -->
+            <div class="md:hidden flex items-center gap-3">
+                <select id="languageSelectMobile" class="bg-green-800 text-white px-2 py-1 rounded text-xs cursor-pointer hover:bg-green-700" onchange="changeLanguage(this.value)">
+                    <option value="nl">🇳🇱</option>
+                    <option value="en">🇬🇧</option>
+                    <option value="ar" selected>🇸🇦</option>
+                    <option value="ko">🇽🇰</option>
+                    <option value="fr">🇫🇷</option>
+                    <option value="tr">🇹🇷</option>
+                </select>
+                <button id="mobileMenuBtn" class="text-2xl hover:text-green-200" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">☰</button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobileMenu" class="hidden md:hidden bg-green-800 px-4 py-3 space-y-2">
+            <a href="index-ar.html" class="block text-white hover:text-green-200 py-2" onclick="document.getElementById('mobileMenu').classList.add('hidden')">الرئيسية</a>
+            <a href="about-ar.html" class="block text-white hover:text-green-200 py-2 font-bold" onclick="document.getElementById('mobileMenu').classList.add('hidden')">معلومات عنا</a>
+            <a href="index-ar.html#waarom" class="block text-white hover:text-green-200 py-2" onclick="document.getElementById('mobileMenu').classList.add('hidden')">لماذا؟</a>
+            <a href="index-ar.html#timeline" class="block text-white hover:text-green-200 py-2" onclick="document.getElementById('mobileMenu').classList.add('hidden')">الجدول الزمني</a>
+            <a href="statuten-en-wetten.html" class="block text-white hover:text-green-200 py-2" onclick="document.getElementById('mobileMenu').classList.add('hidden')">الأنظمة</a>
+            <a href="index-ar.html#contact" class="block text-white hover:text-green-200 py-2" onclick="document.getElementById('mobileMenu').classList.add('hidden')">اتصل</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-b from-green-900 to-green-800 text-white py-20 px-4">
+        <div class="max-w-4xl mx-auto text-center fade-in">
+            <h1 class="text-5xl font-bold mb-4">معلومات عنا</h1>
+            <p class="text-xl text-green-100">الوجه خلف مبادرة الشفافية</p>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="py-16 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-green-50 p-8 rounded-lg border-l-4 border-green-900 mb-12 fade-in">
+                <h2 class="text-3xl font-bold text-green-900 mb-6">المقدمة: لماذا أشارك هذا معكم</h2>
+                
+                <div class="mb-6">
+                    <p class="text-lg font-semibold text-green-900 mb-4">السلام عليكم ورحمة الله وبركاته،</p>
+                    <p class="text-gray-700 leading-relaxed mb-4 text-right">
+                        في عملية حيث نطالب بمزيد من الانفتاح والشفافية داخل مسجدنا، أجد من المنطقي تماماً أن أكون شفافاً تماماً معكم. الثقة هي أساس مجتمعنا، وتبدأ هذه الثقة بمعرفة من هو الشخص الذي يدعم هذه المبادرة.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed text-right">
+                        أشاطركم خلفيتي حتى تعلموا أنني لا أتحدث فقط كأخ ملتزم، بل أيضاً من قاعدة مهنية تركز على الصدق والإدارة الصحيحة الامتثال للقواعد. هدفي الوحيد هو استخدام خبرتي ومعرفتي لمصلحة مسجدنا العامة، حتى نتمكن من البناء معاً لمستقبل يقوم على اتفاقيات واضحة واحترام متبادل.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Background -->
+    <section class="py-16 px-4 bg-gray-100">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-green-900 mb-12 text-center">الخلفية المهنية: الخبرة والنزاهة</h2>
+            
+            <p class="text-gray-700 text-lg text-center mb-12 leading-relaxed text-right">
+                بالإضافة إلى التزامي الشخصي بالمسجد، أحضر سنوات من الخبرة المهنية لتوجيه عملية الشفافية هذه بطريقة خبيرة وأخلاقية. تتميز حياتي المهنية بـ:
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Card 1: القيادة الاستراتيجية -->
+                <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-green-900 fade-in">
+                    <div class="flex items-start gap-4">
+                        <div class="text-4xl">🎯</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-green-900 mb-4">القيادة الاستراتيجية والإدارة</h3>
+                            <p class="text-gray-700 text-right">
+                                لدي أكثر من 15 سنة من الخبرة في تحفيز الإيرادات وحصة السوق للمنظمات الدولية. كمدير مبيعات، قدت فرقاً من 31 موظفاً وكنت مسؤولاً عن تحقيق أهداف استراتيجية معقدة.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: العمليات التجارية -->
+                <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-green-900 fade-in">
+                    <div class="flex items-start gap-4">
+                        <div class="text-4xl">⚙️</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-green-900 mb-4">العمليات التجارية وتحسين العمليات</h3>
+                            <p class="text-gray-700 text-right">
+                                أنا مؤيد لتحويل الأعمال من خلال منهجيات Lean وحاصل على شهادة Six Sigma (Green Belt). هذا يمكنني من تحسين العمليات وضمان كفاءة المنظمة.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: إدارة النزاعات والاتصالات -->
+                <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-green-900 fade-in">
+                    <div class="flex items-start gap-4">
+                        <div class="text-4xl">💬</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-green-900 mb-4">إدارة النزاعات والاتصالات</h3>
+                            <p class="text-gray-700 text-right">
+                                بالإضافة إلى خبرتي التجارية، أنا ممارس NLP معتمد وأمتلك خبرة في إدارة النزاعات والتفاوض. أنا متواصل متعدد اللغات، وأتحدث بطلاقة الهولندية والإنجليزية والعربية.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: التعليم -->
+                <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-green-900 fade-in">
+                    <div class="flex items-start gap-4">
+                        <div class="text-4xl">🎓</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-green-900 mb-4">التعليم</h3>
+                            <p class="text-gray-700 text-right">
+                                أمتلك درجة البكالوريوس في إدارة الأعمال وتكنولوجيا المعلومات وأملك مؤهلات إضافية في Human Potential Coaching.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Goal Section -->
+            <div class="mt-12 bg-green-50 p-8 rounded-lg border-l-4 border-green-900">
+                <h3 class="text-2xl font-bold text-green-900 mb-4">🎯 هدفي</h3>
+                <p class="text-gray-700 text-lg leading-relaxed text-right">
+                    هدفي هو استخدام خبرتي التجارية لمساعدة جمعيتنا Tawheed على التحول إلى منظمة شفافة تمتثل كاملاً للمتطلبات القانونية والأنظمة.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="py-16 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-blue-50 p-8 rounded-lg border-l-4 border-blue-900">
+                <h3 class="text-2xl font-bold text-blue-900 mb-4">💙 رؤيتنا المشتركة</h3>
+                <p class="text-gray-700 leading-relaxed text-right">
+                    أعتقد أنه من خلال مشاركة هذه العملية معكم، لا نقوي مسجدنا فحسب، بل نقدم أيضاً مثالاً على كيفية أن تنمو الجماعة الدينية بطريقة مهنية وشفافة. هذا جيد لمستقبلنا وللأجيال القادمة.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 px-4 bg-gradient-to-b from-green-50 to-green-100">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-green-900 mb-8">بناء Tawheed أفضل معاً</h2>
+            <p class="text-gray-700 text-lg mb-8 leading-relaxed text-right">
+                أدعوكم للمشاركة في عملية التحول هذه. اطرحوا الأسئلة، قدموا التعليقات، اعملوا معاً من أجل مسجد نستطيع أن نفخر به.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index-ar.html" class="bg-green-900 text-white px-8 py-3 rounded hover:bg-green-800 font-bold transition text-lg">
+                    ← العودة إلى الرئيسية
+                </a>
+                <a href="index-ar.html#contact" class="bg-blue-900 text-white px-8 py-3 rounded hover:bg-blue-800 font-bold transition text-lg">
+                    💬 اتصل
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-green-900 to-green-800 text-white py-12 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="mb-4">🌙 <strong>مجتمع Tawheed Hoogstraten</strong></p>
+            <p class="text-green-100 mb-8 text-right">
+                نحو مسجد احترافي بصدق ووضوح وثقة
+            </p>
+            <p class="text-sm text-green-200 text-right">
+                © 2026 Tawheed VZW. جميع الأعضاء يعملون معاً لمجتمع أقوى.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function changeLanguage(lang) {
+            const pages = {
+                'nl': 'about.html',
+                'en': 'about-en.html',
+                'ar': 'about-ar.html',
+                'ko': 'about-ko.html',
+                'fr': 'about-fr.html',
+                'tr': 'about-tr.html'
+            };
+            
+            if (pages[lang]) {
+                window.location.href = pages[lang];
+            }
+        }
+        
+        // Set the language selector to current language on page load
+        window.addEventListener('load', function() {
+            const currentFile = window.location.pathname.split('/').pop() || 'about-ar.html';
+            const langMap = {
+                'about.html': 'nl',
+                'about-en.html': 'en',
+                'about-ar.html': 'ar',
+                'about-ko.html': 'ko',
+                'about-fr.html': 'fr',
+                'about-tr.html': 'tr'
+            };
+            
+            const select = document.getElementById('languageSelect');
+            const selectMobile = document.getElementById('languageSelectMobile');
+            
+            if (select && langMap[currentFile]) {
+                select.value = langMap[currentFile];
+            }
+            if (selectMobile && langMap[currentFile]) {
+                selectMobile.value = langMap[currentFile];
+            }
+        });
+    </script>
+
+</body>
+</html>

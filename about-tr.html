@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımızda - Tawheed VZW</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    
+    <!-- Navigation -->
+    <nav class="bg-gradient-to-r from-green-900 to-green-800 text-white sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold">🌙 Tawheed</div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-4">
+                <ul class="flex gap-8 text-sm">
+                    <li><a href="index-tr.html" class="hover:text-green-200">Başlangıç</a></li>
+                    <li><a href="about-tr.html" class="hover:text-green-200 font-bold text-green-300">Hakkımızda</a></li>
+                    <li><a href="index-tr.html#waarom" class="hover:text-green-200">Neden?</a></li>
+                    <li><a href="index-tr.html#timeline" class="hover:text-green-200">Zaman Çizelgesi</a></li>
+                    <li><a href="statuten-en-wetten.html" class="hover:text-green-200">Tüzük</a></li>
+                    <li><a href="index-tr.html#contact" class="hover:text-green-200">İletişim</a></li>
+                </ul>
+                <!-- Language Switcher Desktop -->
+                <select id="languageSelect" class="bg-green-800 text-white px-3 py-2 rounded text-sm cursor-pointer hover:bg-green-700" onchange="changeLanguage(this.value)">
+                    <option value="nl">🇳🇱 Nederlands</option>
+                    <option value="en">🇬🇧 English</option>
+                    <option value="ar">🇸🇦 العربية</option>
+                    <option value="ko">🇽🇰 Shqip</option>
+                    <option value="fr">🇫🇷 Français</option>
+                    <option value="tr" selected>🇹🇷 Türkçe</option>
+                </select>
+            </div>
+            
+            <!-- Mobile Menu Button & Language -->
+            <div class="md:hidden flex items-center gap-3">
+                <select id="languageSelectMobile" class="bg-green-800 text-white px-2 py-1 rounded text-xs cursor-pointer hover:bg-green-700" onchange="changeLanguage(this.value)">
+                    <option value="nl">🇳🇱</option>
+                    <option value="en">🇬🇧</option>
+                    <option value="ar">🇸🇦</option>
+                    <option value="ko">🇽🇰</option>
+                    <option value="fr">🇫🇷</option>
+                    <option value="tr" selected>🇹🇷</option>
+                </select>
+                <button id="mobileMenuBtn" class="text-2xl hover:text-green-200" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">☰</button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobileMenu" class="hidden md:hidden bg-green-800 px-4 py-3 space-y-2">
+            <a href="index-tr.html" class="block text-white hover:text-green-200 py-2" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Başlangıç</a>
+            <a href="about-tr.html" class="block text-white hover:text-green-200 py-2 font-bold" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Hakkımızda</a>
+            <a href="index-tr.html#waarom" class="block text-white hover:text-green-200 py-2" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Neden?</a>
+            <a href="index-tr.html#timeline" class="block text-white hover:text-green-200 py-2" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Zaman Çizelgesi</a>
+            <a href="statuten-en-wetten.html" class="block text-white hover:text-green-200 py-2" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Tüzük</a>
+            <a href="index-tr.html#contact" class="block text-white hover:text-green-200 py-2" onclick="document.getElementById('mobileMenu').classList.add('hidden')">İletişim</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-b from-green-900 to-green-800 text-white py-20 px-4">
+        <div class="max-w-4xl mx-auto text-center fade-in">
+            <h1 class="text-5xl font-bold mb-4">Hakkımızda</h1>
+            <p class="text-xl text-green-100">Şeffaflık girişiminin arkasındaki yüz</p>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="py-16 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-green-50 p-8 rounded-lg border-l-4 border-green-900 mb-12 fade-in">
+                <h2 class="text-3xl font-bold text-green-900 mb-6">Giriş: Bunu Neden Sizinle Paylaşıyorum</h2>
+                
+                <div class="mb-6">
+                    <p class="text-lg font-semibold text-green-900 mb-4">Selam Alaikum,</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Camimizde daha fazla açıklık ve şeffaflık talep ettiğimiz bir süreçte, kendim de tamamen şeffaf olmanın mantıklı olacağını düşünüyorum. Güven topluluğumuzun temelidir ve bu güven, bu girişimi destekleyen kişinin kim olduğunu bilmekle başlar.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        Geçmişimi sizinle paylaşıyorum, böylece sadece ilgili bir kardeş olarak değil, aynı zamanda dürüstlük, düzgün yönetim ve kurallara uyum olmak üzere tasarlanmış profesyonel bir temelden konuştuğumu bilirsiniz. Tek amacım, deneyimimi ve bilgimi camimizin genel yararı için kullanmak, böylece net anlaşmalar ve karşılıklı saygıya dayalı bir geleceği birlikte inşa edebilmek.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Background -->
+    <section class="py-16 px-4 bg-gray-100">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-green-900 mb-12 text-center">Profesyonel Arka Plan: Uzmanlık & Bütünlük</h2>
+            
+            <p class="text-gray-700 text-lg text-center mb-12 leading-relaxed">
+                Camiyle olan kişisel katılımımın ötesinde, bu şeffaflık sürecini uzman ve etik bir şekilde yönlendirmek için uzun yıllar profesyonel deneyim getiriyorum. Kariyerim şu şekilde karakterize edilir:
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Card 1: Stratejik Liderlik -->
+                <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-green-900 fade-in">
+                    <div class="flex items-start gap-4">
+                        <div class="text-4xl">🎯</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-green-900 mb-4">Stratejik Liderlik & Yönetim</h3>
+                            <p class="text-gray-700">
+                                Uluslararası kuruluşlar için gelir ve pazar payını artırmada 15 yıldan fazla deneyime sahipim. Satış Müdürü olarak 31 FTE'den oluşan ekipleri yönettim ve karmaşık stratejik hedefleri başarmaktan sorumluydum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: İşletme Operasyonları -->
+                <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-green-900 fade-in">
+                    <div class="flex items-start gap-4">
+                        <div class="text-4xl">⚙️</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-green-900 mb-4">İşletme Operasyonları ve Süreç Optimizasyonu</h3>
+                            <p class="text-gray-700">
+                                Lean metodolojileri aracılığıyla işletme dönüşümünün taraftarıyım ve Six Sigma (Green Belt) sertifikalıyım. Bu, süreçleri iyileştirmemi ve organizasyonel verimliliği sağlamama olanak tanır.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Çatışma Yönetimi -->
+                <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-green-900 fade-in">
+                    <div class="flex items-start gap-4">
+                        <div class="text-4xl">💬</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-green-900 mb-4">Çatışma Yönetimi & İletişim</h3>
+                            <p class="text-gray-700">
+                                İşletme deneyimime ek olarak, sertifikalı bir NLP Uygulayıcısı olup Çatışma Yönetimi ve müzakere konusunda uzmanlığa sahibim. Hollandaca, İngilizce ve Arapçada akıcı çok dilli bir iletişimciyim.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Eğitim -->
+                <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-green-900 fade-in">
+                    <div class="flex items-start gap-4">
+                        <div class="text-4xl">🎓</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-green-900 mb-4">Eğitim</h3>
+                            <p class="text-gray-700">
+                                İşletme Yönetimi ve Bilgi Teknolojisinde Lisans Derecesine sahibim ve İnsan Potansiyel Koçluğunda ek sertifikasyonlara sahibim.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Goal Section -->
+            <div class="mt-12 bg-green-50 p-8 rounded-lg border-l-4 border-green-900">
+                <h3 class="text-2xl font-bold text-green-900 mb-4">🎯 Hedefim</h3>
+                <p class="text-gray-700 text-lg leading-relaxed">
+                    Hedefim, bu işletme deneyimini, Tawheed derneğimizin yasal gerekliliklere ve tüzüklere tam olarak uyum gösteren şeffaf bir organizasyona dönüşmesine yardımcı olmak için kullanmaktır.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="py-16 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-blue-50 p-8 rounded-lg border-l-4 border-blue-900">
+                <h3 class="text-2xl font-bold text-blue-900 mb-4">💙 Ortak Vizyonumuz</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    Bu süreci sizinle paylaşarak, sadece camimizi güçlendirmekle kalmayıp, aynı zamanda dini bir topluluğun profesyonel ve şeffaf bir şekilde nasıl gelişebileceğine bir örnek verebileceğimize inanıyorum. Bu, geleceğimiz ve gelecek tüm nesiller için iyidir.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 px-4 bg-gradient-to-b from-green-50 to-green-100">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-green-900 mb-8">Birlikte Daha İyi Bir Tawheed İnşa Etme</h2>
+            <p class="text-gray-700 text-lg mb-8 leading-relaxed">
+                Sizi bu dönüşüm sürecine katılmaya davet ediyorum. Sorular sorun, geri bildirim sağlayın ve birlikte gurur duyabileceğimiz bir cami için çalışın.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index-tr.html" class="bg-green-900 text-white px-8 py-3 rounded hover:bg-green-800 font-bold transition text-lg">
+                    ← Başlangıca Dön
+                </a>
+                <a href="index-tr.html#contact" class="bg-blue-900 text-white px-8 py-3 rounded hover:bg-blue-800 font-bold transition text-lg">
+                    💬 İletişim
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-green-900 to-green-800 text-white py-12 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="mb-4">🌙 <strong>Tawheed Komu Hoogstraten</strong></p>
+            <p class="text-green-100 mb-8">
+                Dürüstlük, açıklık ve güven ile profesyonel bir camiye doğru
+            </p>
+            <p class="text-sm text-green-200">
+                © 2026 Tawheed VZW. Tüm üyeler daha güçlü bir toplum için birlikte çalışır.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function changeLanguage(lang) {
+            const pages = {
+                'nl': 'about.html',
+                'en': 'about-en.html',
+                'ar': 'about-ar.html',
+                'ko': 'about-ko.html',
+                'fr': 'about-fr.html',
+                'tr': 'about-tr.html'
+            };
+            
+            if (pages[lang]) {
+                window.location.href = pages[lang];
+            }
+        }
+        
+        // Set the language selector to current language on page load
+        window.addEventListener('load', function() {
+            const currentFile = window.location.pathname.split('/').pop() || 'about-tr.html';
+            const langMap = {
+                'about.html': 'nl',
+                'about-en.html': 'en',
+                'about-ar.html': 'ar',
+                'about-ko.html': 'ko',
+                'about-fr.html': 'fr',
+                'about-tr.html': 'tr'
+            };
+            
+            const select = document.getElementById('languageSelect');
+            const selectMobile = document.getElementById('languageSelectMobile');
+            
+            if (select && langMap[currentFile]) {
+                select.value = langMap[currentFile];
+            }
+            if (selectMobile && langMap[currentFile]) {
+                selectMobile.value = langMap[currentFile];
+            }
+        });
+    </script>
+
+</body>
+</html>

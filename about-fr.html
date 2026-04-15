@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos de Nous - Tawheed VZW</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    
+    <!-- Navigation -->
+    <nav class="bg-gradient-to-r from-green-900 to-green-800 text-white sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold">🌙 Tawheed</div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-4">
+                <ul class="flex gap-8 text-sm">
+                    <li><a href="index-fr.html" class="hover:text-green-200">Accueil</a></li>
+                    <li><a href="about-fr.html" class="hover:text-green-200 font-bold text-green-300">À Propos</a></li>
+                    <li><a href="index-fr.html#waarom" class="hover:text-green-200">Pourquoi?</a></li>
+                    <li><a href="index-fr.html#timeline" class="hover:text-green-200">Chronologie</a></li>
+                    <li><a href="statuten-en-wetten.html" class="hover:text-green-200">Statuts</a></li>
+                    <li><a href="index-fr.html#contact" class="hover:text-green-200">Contact</a></li>
+                </ul>
+                <!-- Language Switcher Desktop -->
+                <select id="languageSelect" class="bg-green-800 text-white px-3 py-2 rounded text-sm cursor-pointer hover:bg-green-700" onchange="changeLanguage(this.value)">
+                    <option value="nl">🇳🇱 Nederlands</option>
+                    <option value="en">🇬🇧 English</option>
+                    <option value="ar">🇸🇦 العربية</option>
+                    <option value="ko">🇽🇰 Shqip</option>
+                    <option value="fr" selected>🇫🇷 Français</option>
+                    <option value="tr">🇹🇷 Türkçe</option>
+                </select>
+            </div>
+            
+            <!-- Mobile Menu Button & Language -->
+            <div class="md:hidden flex items-center gap-3">
+                <select id="languageSelectMobile" class="bg-green-800 text-white px-2 py-1 rounded text-xs cursor-pointer hover:bg-green-700" onchange="changeLanguage(this.value)">
+                    <option value="nl">🇳🇱</option>
+                    <option value="en">🇬🇧</option>
+                    <option value="ar">🇸🇦</option>
+                    <option value="ko">🇽🇰</option>
+                    <option value="fr" selected>🇫🇷</option>
+                    <option value="tr">🇹🇷</option>
+                </select>
+                <button id="mobileMenuBtn" class="text-2xl hover:text-green-200" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">☰</button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobileMenu" class="hidden md:hidden bg-green-800 px-4 py-3 space-y-2">
+            <a href="index-fr.html" class="block text-white hover:text-green-200 py-2" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Accueil</a>
+            <a href="about-fr.html" class="block text-white hover:text-green-200 py-2 font-bold" onclick="document.getElementById('mobileMenu').classList.add('hidden')">À Propos</a>
+            <a href="index-fr.html#waarom" class="block text-white hover:text-green-200 py-2" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Pourquoi?</a>
+            <a href="index-fr.html#timeline" class="block text-white hover:text-green-200 py-2" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Chronologie</a>
+            <a href="statuten-en-wetten.html" class="block text-white hover:text-green-200 py-2" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Statuts</a>
+            <a href="index-fr.html#contact" class="block text-white hover:text-green-200 py-2" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-b from-green-900 to-green-800 text-white py-20 px-4">
+        <div class="max-w-4xl mx-auto text-center fade-in">
+            <h1 class="text-5xl font-bold mb-4">À Propos de Nous</h1>
+            <p class="text-xl text-green-100">Le visage derrière l'initiative pour la transparence</p>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="py-16 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-green-50 p-8 rounded-lg border-l-4 border-green-900 mb-12 fade-in">
+                <h2 class="text-3xl font-bold text-green-900 mb-6">Introduction: Pourquoi je partage cela avec vous</h2>
+                
+                <div class="mb-6">
+                    <p class="text-lg font-semibold text-green-900 mb-4">Assalam Alaikum,</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Dans un processus où nous demandons une plus grande ouverture et transparence au sein de notre mosquée, je trouve logique que je sois moi-même complètement transparent envers vous. La confiance est le fondement de notre communauté, et cette confiance commence par savoir qui est la personne qui soutient cette initiative.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        Je partage mon expérience avec vous, afin que vous sachiez que je ne parle pas seulement comme un frère engagé, mais aussi à partir d'une base professionnelle axée sur l'honnêteté, l'administration correcte et le respect des règles. Mon seul objectif est d'utiliser mon expérience et mes connaissances pour le bien général de notre mosquée, afin que nous puissions construire ensemble un avenir basé sur des accords clairs et le respect mutuel.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Background -->
+    <section class="py-16 px-4 bg-gray-100">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-green-900 mb-12 text-center">Parcours Professionnel: Expertise & Intégrité</h2>
+            
+            <p class="text-gray-700 text-lg text-center mb-12 leading-relaxed">
+                Au-delà de mon implication personnelle à la mosquée, j'apporte des années d'expérience professionnelle pour guider ce processus de transparence de manière experte et éthique. Ma carrière se caractérise par:
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Card 1: Leadership Stratégique -->
+                <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-green-900 fade-in">
+                    <div class="flex items-start gap-4">
+                        <div class="text-4xl">🎯</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-green-900 mb-4">Leadership Stratégique & Management</h3>
+                            <p class="text-gray-700">
+                                J'ai plus de 15 ans d'expérience dans la stimulation du chiffre d'affaires et de la part de marché pour des organisations internationales. En tant que directeur commercial, j'ai dirigé des équipes de 31 ETP et j'ai été responsable de la réalisation d'objectifs stratégiques complexes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Opérations Commerciales & Optimisation des Processus -->
+                <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-green-900 fade-in">
+                    <div class="flex items-start gap-4">
+                        <div class="text-4xl">⚙️</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-green-900 mb-4">Opérations Commerciales & Optimisation des Processus</h3>
+                            <p class="text-gray-700">
+                                Je suis un partisan de la transformation des entreprises par le biais des méthodologies Lean et suis certifié en Six Sigma (Green Belt). Cela me permet d'améliorer les processus et d'assurer l'efficacité organisationnelle.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Gestion des Conflits & Communication -->
+                <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-green-900 fade-in">
+                    <div class="flex items-start gap-4">
+                        <div class="text-4xl">💬</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-green-900 mb-4">Gestion des Conflits & Communication</h3>
+                            <p class="text-gray-700">
+                                En plus de mon expérience commerciale, je suis un praticien PNL certifié avec une expertise en gestion des conflits et en négociation. Je suis un communicateur multilingue, parlant couramment le néerlandais, l'anglais et l'arabe.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Éducation -->
+                <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-green-900 fade-in">
+                    <div class="flex items-start gap-4">
+                        <div class="text-4xl">🎓</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-green-900 mb-4">Éducation</h3>
+                            <p class="text-gray-700">
+                                Je possède un diplôme de licence en Business Management et IT et j'ai des qualifications supplémentaires en Human Potential Coaching.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Goal Section -->
+            <div class="mt-12 bg-green-50 p-8 rounded-lg border-l-4 border-green-900">
+                <h3 class="text-2xl font-bold text-green-900 mb-4">🎯 Mon Objectif</h3>
+                <p class="text-gray-700 text-lg leading-relaxed">
+                    Mon objectif est d'utiliser cette expérience commerciale pour aider notre association Tawheed à se transformer en une organisation transparente qui respecte fully les exigences légales et les statuts.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="py-16 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-blue-50 p-8 rounded-lg border-l-4 border-blue-900">
+                <h3 class="text-2xl font-bold text-blue-900 mb-4">💙 Notre Vision Partagée</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    Je crois qu'en partageant ce processus avec vous, nous renforçons non seulement notre mosquée, mais nous montrons aussi l'exemple de la façon dont une communauté religieuse peut croître de manière professionnelle et transparente. C'est bon pour notre avenir et pour toutes les générations à venir.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 px-4 bg-gradient-to-b from-green-50 to-green-100">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-green-900 mb-8">Construire un Meilleur Tawheed Ensemble</h2>
+            <p class="text-gray-700 text-lg mb-8 leading-relaxed">
+                Je vous invite à participer à ce processus de transformation. Posez des questions, fournissez des commentaires et travaillez ensemble vers une mosquée dont nous pouvons être fiers.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index-fr.html" class="bg-green-900 text-white px-8 py-3 rounded hover:bg-green-800 font-bold transition text-lg">
+                    ← Retour à l'Accueil
+                </a>
+                <a href="index-fr.html#contact" class="bg-blue-900 text-white px-8 py-3 rounded hover:bg-blue-800 font-bold transition text-lg">
+                    💬 Contact
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-green-900 to-green-800 text-white py-12 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="mb-4">🌙 <strong>Communauté Tawheed Hoogstraten</strong></p>
+            <p class="text-green-100 mb-8">
+                Vers une mosquée professionnelle avec honnêteté, clarté et confiance
+            </p>
+            <p class="text-sm text-green-200">
+                © 2026 Tawheed VZW. Tous les membres travaillent ensemble pour une communauté plus forte.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function changeLanguage(lang) {
+            const pages = {
+                'nl': 'about.html',
+                'en': 'about-en.html',
+                'ar': 'about-ar.html',
+                'ko': 'about-ko.html',
+                'fr': 'about-fr.html',
+                'tr': 'about-tr.html'
+            };
+            
+            if (pages[lang]) {
+                window.location.href = pages[lang];
+            }
+        }
+        
+        // Set the language selector to current language on page load
+        window.addEventListener('load', function() {
+            const currentFile = window.location.pathname.split('/').pop() || 'about-fr.html';
+            const langMap = {
+                'about.html': 'nl',
+                'about-en.html': 'en',
+                'about-ar.html': 'ar',
+                'about-ko.html': 'ko',
+                'about-fr.html': 'fr',
+                'about-tr.html': 'tr'
+            };
+            
+            const select = document.getElementById('languageSelect');
+            const selectMobile = document.getElementById('languageSelectMobile');
+            
+            if (select && langMap[currentFile]) {
+                select.value = langMap[currentFile];
+            }
+            if (selectMobile && langMap[currentFile]) {
+                selectMobile.value = langMap[currentFile];
+            }
+        });
+    </script>
+
+</body>
+</html>

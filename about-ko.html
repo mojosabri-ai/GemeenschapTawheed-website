@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rreth Nesh - Tawheed VZW</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    
+    <!-- Navigation -->
+    <nav class="bg-gradient-to-r from-green-900 to-green-800 text-white sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold">🌙 Tawheed</div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-4">
+                <ul class="flex gap-8 text-sm">
+                    <li><a href="index-ko.html" class="hover:text-green-200">Kryefaqja</a></li>
+                    <li><a href="about-ko.html" class="hover:text-green-200 font-bold text-green-300">Rreth Nesh</a></li>
+                    <li><a href="index-ko.html#pse" class="hover:text-green-200">Pse?</a></li>
+                    <li><a href="index-ko.html#timeline" class="hover:text-green-200">Kronologjia</a></li>
+                    <li><a href="statuten-en-wetten.html" class="hover:text-green-200">Estatutet</a></li>
+                    <li><a href="index-ko.html#contact" class="hover:text-green-200">Kontakt</a></li>
+                </ul>
+                <!-- Language Switcher Desktop -->
+                <select id="languageSelect" class="bg-green-800 text-white px-3 py-2 rounded text-sm cursor-pointer hover:bg-green-700" onchange="changeLanguage(this.value)">
+                    <option value="nl">🇳🇱 Nederlands</option>
+                    <option value="en">🇬🇧 English</option>
+                    <option value="ar">🇸🇦 العربية</option>
+                    <option value="ko" selected>🇽🇰 Shqip</option>
+                    <option value="fr">🇫🇷 Français</option>
+                    <option value="tr">🇹🇷 Türkçe</option>
+                </select>
+            </div>
+            
+            <!-- Mobile Menu Button & Language -->
+            <div class="md:hidden flex items-center gap-3">
+                <select id="languageSelectMobile" class="bg-green-800 text-white px-2 py-1 rounded text-xs cursor-pointer hover:bg-green-700" onchange="changeLanguage(this.value)">
+                    <option value="nl">🇳🇱</option>
+                    <option value="en">🇬🇧</option>
+                    <option value="ar">🇸🇦</option>
+                    <option value="ko" selected>🇽🇰</option>
+                    <option value="fr">🇫🇷</option>
+                    <option value="tr">🇹🇷</option>
+                </select>
+                <button id="mobileMenuBtn" class="text-2xl hover:text-green-200" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">☰</button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobileMenu" class="hidden md:hidden bg-green-800 px-4 py-3 space-y-2">
+            <a href="index-ko.html" class="block text-white hover:text-green-200 py-2" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Kryefaqja</a>
+            <a href="about-ko.html" class="block text-white hover:text-green-200 py-2 font-bold" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Rreth Nesh</a>
+            <a href="index-ko.html#pse" class="block text-white hover:text-green-200 py-2" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Pse?</a>
+            <a href="index-ko.html#timeline" class="block text-white hover:text-green-200 py-2" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Kronologjia</a>
+            <a href="statuten-en-wetten.html" class="block text-white hover:text-green-200 py-2" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Estatutet</a>
+            <a href="index-ko.html#contact" class="block text-white hover:text-green-200 py-2" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Kontakt</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-b from-green-900 to-green-800 text-white py-20 px-4">
+        <div class="max-w-4xl mx-auto text-center fade-in">
+            <h1 class="text-5xl font-bold mb-4">Rreth Nesh</h1>
+            <p class="text-xl text-green-100">Fytyra pas iniciativës për transparencë</p>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="py-16 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-green-50 p-8 rounded-lg border-l-4 border-green-900 mb-12 fade-in">
+                <h2 class="text-3xl font-bold text-green-900 mb-6">Prezantim: Pse e ndaj këtë me ju</h2>
+                
+                <div class="mb-6">
+                    <p class="text-lg font-semibold text-green-900 mb-4">Assalamu Alaikum,</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Në një proces ku kërkojmë më shumë hapje dhe transparencë në xhamiun tonë, e shoh të natyrshme që të jem plotësisht transparent ndaj jush. Besimi është themeli i komunitetit tonë, dhe ky besim fillon me kënaqlien kush është personi që mbështet këtë iniciativë.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        E ndaj sfond tim me ju, në mënyrë që të dini përse nuk po flas vetëm si brat i angazhuar, por edhe nga baza profesionale të fokusuar në ndershmëri, administrim të duhur dhe përputhje me rregullat. Qëllimi im i vetëm është të përdor përvojën dhe dijen time për përfitin e përgjithshëm të xhamiut tonë, në mënyrë që të mund të ndërtojmë së bashku një të ardhme të bazuar në marrëveshje të qarta dhe respekt të ndërsjellë.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Background -->
+    <section class="py-16 px-4 bg-gray-100">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-green-900 mb-12 text-center">Përvojë Profesionale: Ekspertizë & Integritet</h2>
+            
+            <p class="text-gray-700 text-lg text-center mb-12 leading-relaxed">
+                Përtej angazhimit tim personal në xhami, sohem shumë vjet përvojë profesionale për të drejtuar këtë proces transparence në mënyrë eksperti dhe etike. Karriera ime karakterizohet nga:
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Card 1: Udhëzim Strategjik -->
+                <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-green-900 fade-in">
+                    <div class="flex items-start gap-4">
+                        <div class="text-4xl">🎯</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-green-900 mb-4">Udhëzim Strategjik & Menaxhim</h3>
+                            <p class="text-gray-700">
+                                Kam më shumë se 15 vite përvojë në stimulimin e të ardhurave dhe të pjesës së tregut për organizata ndërkombëtare. Si Drejtor i Shitjeve, kam udhëzuar ekipe me 31 punonjës dhe kam qenë përgjegjës për arritjen e objektiveve strategjike komplekse.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Operacione Biznesi -->
+                <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-green-900 fade-in">
+                    <div class="flex items-start gap-4">
+                        <div class="text-4xl">⚙️</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-green-900 mb-4">Operacione Biznesi & Optimizim Procesesh</h3>
+                            <p class="text-gray-700">
+                                Jam përkrahës i transformimit të biznesit përmes metodologjive Lean dhe jam i sertifikuar në Six Sigma (Green Belt). Kjo më lejon të përmirësoj proceset dhe të siguroj efikasitetin organizativ.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Menaxhim Konfliktesh -->
+                <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-green-900 fade-in">
+                    <div class="flex items-start gap-4">
+                        <div class="text-4xl">💬</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-green-900 mb-4">Menaxhim Konfliktesh & Komunikim</h3>
+                            <p class="text-gray-700">
+                                Përveç përvojës time të biznesit, jam Praktikant i Sertifikuar NLP me ekspertizë në Menaxhimin e Konflikteve dhe negocim. Jam komunikator shumgjuhësh, i rrjedhshëm në holandeze, angleze dhe arabisht.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Edukimi -->
+                <div class="bg-white p-8 rounded-lg shadow-md border-l-4 border-green-900 fade-in">
+                    <div class="flex items-start gap-4">
+                        <div class="text-4xl">🎓</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-green-900 mb-4">Edukimi</h3>
+                            <p class="text-gray-700">
+                                Kam Diplom Bakalaureati në Menaxhimin e Biznesit dhe Teknologjinë e Informacionit dhe kam kualifikime shtesë në Human Potential Coaching.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Goal Section -->
+            <div class="mt-12 bg-green-50 p-8 rounded-lg border-l-4 border-green-900">
+                <h3 class="text-2xl font-bold text-green-900 mb-4">🎯 Qëllimi Im</h3>
+                <p class="text-gray-700 text-lg leading-relaxed">
+                    Qëllimi im është të përdor këtë përvojë biznesi për të ndihmuar shoqatën tonë Tawheed të shndërrohet në një organizatë transparente që përputhet plotësisht me kërkesat ligjore dhe statutet.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="py-16 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-blue-50 p-8 rounded-lg border-l-4 border-blue-900">
+                <h3 class="text-2xl font-bold text-blue-900 mb-4">💙 Vizioni Ynë i Përbashkët</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    Besoj se duke ndarë këtë proces me ju, jo vetëm përforcojmë xhamiun tonë, por vendosim edhe një shembull se si një komunitet fetar mund të rritet në një mënyrë profesionale dhe transparente. Kjo është e mirë për të ardhmen tonë dhe për të gjitha brezat në ardhje.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 px-4 bg-gradient-to-b from-green-50 to-green-100">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-green-900 mb-8">Ndërtim i Një Tawheed më i Mirë Bashkërisht</h2>
+            <p class="text-gray-700 text-lg mb-8 leading-relaxed">
+                Ju ftoj të merrni pjesë në këtë proces transformacioni. Bëni pyetje, bëni sugjerime, dhe punoni bashkë drejt një xhamie që mund të jemi vërtet të krenuar.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index-ko.html" class="bg-green-900 text-white px-8 py-3 rounded hover:bg-green-800 font-bold transition text-lg">
+                    ← Kthehu në Shtëpi
+                </a>
+                <a href="index-ko.html#contact" class="bg-blue-900 text-white px-8 py-3 rounded hover:bg-blue-800 font-bold transition text-lg">
+                    💬 Kontakt
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-green-900 to-green-800 text-white py-12 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="mb-4">🌙 <strong>Komunitetit Tawheed Hoogstraten</strong></p>
+            <p class="text-green-100 mb-8">
+                Drejt një xhamie profesionale me ndershmëri, qartësi dhe besim
+            </p>
+            <p class="text-sm text-green-200">
+                © 2026 Tawheed VZW. Të gjithë anëtarët punojnë bashkërisht për një komunitet më të fortë.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function changeLanguage(lang) {
+            const pages = {
+                'nl': 'about.html',
+                'en': 'about-en.html',
+                'ar': 'about-ar.html',
+                'ko': 'about-ko.html',
+                'fr': 'about-fr.html',
+                'tr': 'about-tr.html'
+            };
+            
+            if (pages[lang]) {
+                window.location.href = pages[lang];
+            }
+        }
+        
+        // Set the language selector to current language on page load
+        window.addEventListener('load', function() {
+            const currentFile = window.location.pathname.split('/').pop() || 'about-ko.html';
+            const langMap = {
+                'about.html': 'nl',
+                'about-en.html': 'en',
+                'about-ar.html': 'ar',
+                'about-ko.html': 'ko',
+                'about-fr.html': 'fr',
+                'about-tr.html': 'tr'
+            };
+            
+            const select = document.getElementById('languageSelect');
+            const selectMobile = document.getElementById('languageSelectMobile');
+            
+            if (select && langMap[currentFile]) {
+                select.value = langMap[currentFile];
+            }
+            if (selectMobile && langMap[currentFile]) {
+                selectMobile.value = langMap[currentFile];
+            }
+        });
+    </script>
+
+</body>
+</html>
